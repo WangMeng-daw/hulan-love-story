@@ -1,0 +1,1795 @@
+/* Everyday desktop applications: real portraits, personal albums and normal controls. */
+.avatar.portrait {
+  position: relative;
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  background-color: #d5d6cf;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: block;
+  box-shadow: inset 0 0 0 1px #0000000d;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  aspect-ratio: 1;
+  width: 39px;
+  height: 39px;
+}
+.avatar.portrait > .atlas-bitmap,
+.life-photo > .atlas-bitmap {
+  position: absolute;
+  display: block;
+  width: 200%;
+  height: 200%;
+  max-width: none;
+  object-fit: fill;
+  pointer-events: none;
+}
+.life-photo {
+  position: relative;
+  overflow: hidden;
+}
+.avatar.portrait.transfer-avatar {
+  display: grid;
+  place-items: center;
+  background: #35b78d;
+  color: white;
+}
+.avatar.portrait:hover {
+  filter: brightness(1.04);
+}
+.wechat-layout {
+  grid-template-columns: 58px 245px minmax(0, 1fr);
+  color: #202020;
+}
+.wechat-layout.social-mode {
+  grid-template-columns: 58px minmax(0, 1fr);
+}
+.wechat-rail {
+  gap: 24px;
+  background: #292c30;
+  padding-top: 21px;
+}
+.wechat-rail > .avatar.portrait {
+  width: 37px;
+  height: 37px;
+  margin-bottom: 7px;
+}
+.wechat-rail > button.selected {
+  color: #07c160;
+}
+.moments-symbol {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #66ac69 0deg 62deg,
+    #e1b955 62deg 121deg,
+    #dc835f 121deg 183deg,
+    #c4627a 183deg 241deg,
+    #7396b8 241deg 302deg,
+    #74b4a5 302deg
+  );
+  position: relative;
+  flex-shrink: 0;
+}
+.moments-symbol:after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #292c30;
+  border-radius: 50%;
+  left: 7px;
+  top: 7px;
+}
+.moments-top .moments-symbol:after {
+  background: #f7f7f7;
+}
+.contact {
+  padding: 15px 13px;
+  min-height: 80px;
+}
+.contact strong {
+  color: #242424;
+  font-size: 14px;
+  padding-right: 46px;
+}
+.contact small {
+  color: #969696;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.contact-time {
+  position: absolute;
+  right: 11px;
+  top: 15px;
+  font-size: 9px;
+  color: #999;
+}
+.contact-muted {
+  position: absolute;
+  right: 12px;
+  bottom: 15px;
+  color: #aaa;
+}
+.contact.pinned-contact {
+  background: #dcdfde;
+}
+.contact.active {
+  background: #c8ccca;
+}
+.contact .avatar {
+  width: 42px;
+  height: 42px;
+}
+.conversation-head {
+  height: 67px;
+  padding: 0 25px;
+}
+.conversation-head strong {
+  color: #242424;
+  font-size: 17px;
+}
+.conversation-head small {
+  color: #9c9c9c;
+}
+.conversation-scroll {
+  padding: 23px 25px;
+}
+.message .bubble {
+  font-size: 15px;
+  color: #222;
+  line-height: 1.7;
+  padding: 10px 13px;
+  white-space: pre-wrap;
+}
+.message .avatar.portrait {
+  width: 37px;
+  height: 37px;
+}
+.message.sent .bubble {
+  background: #a9e87b;
+  border-color: #9dda72;
+}
+.message.sent .bubble:before {
+  background: #a9e87b !important;
+}
+.chat-compose {
+  min-height: 160px;
+  max-height: 48%;
+  padding: 10px 22px 12px;
+  background: #fff;
+}
+.compose-tools {
+  height: 23px;
+  margin-bottom: 7px;
+  color: #747474;
+  gap: 18px;
+}
+.compose-tools button {
+  border: 0;
+  background: none;
+  color: #707070;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+.compose-tools > span {
+  color: #aaa;
+}
+.reply-options {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+.reply-chip {
+  width: auto;
+  flex: 0 1 auto;
+  background: #f1f6ee;
+  border: 1px solid #d8e4d3;
+  color: #58724d;
+  font-size: 12px;
+  line-height: 1.55;
+  padding: 6px 9px;
+  border-radius: 4px;
+  gap: 9px;
+}
+.reply-chip.secondary {
+  background: #f4f4f4;
+  border-color: #e2e2e2;
+  color: #697069;
+}
+.reply-chip > svg {
+  width: 12px;
+}
+.compose-placeholder {
+  font-size: 12px;
+  line-height: 1.65;
+  margin: 0;
+  padding: 2px 0;
+  color: #999;
+}
+.chat-input {
+  width: 100%;
+  min-height: 43px;
+  height: 50px;
+  resize: none;
+  border: 0;
+  outline: 0;
+  display: block;
+  font: 14px/1.65 inherit;
+  color: #202020;
+  background: #fff;
+  max-height: 120px;
+}
+.chat-input:focus {
+  outline: 0;
+}
+.chat-input::placeholder {
+  color: #b4b4b4;
+}
+.chat-send-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 3px;
+}
+.chat-send-row small {
+  font-size: 10px;
+  color: #b2b2b2;
+}
+.wechat-send {
+  border: 0;
+  border-radius: 4px;
+  background: #07c160;
+  color: white;
+  padding: 8px 22px;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+.wechat-send:hover {
+  background: #08ad58;
+}
+.wechat-send:disabled {
+  background: #e5e5e5;
+  color: #a7a7a7;
+  cursor: default;
+}
+.typing-status {
+  font-size: 12px;
+  color: #9ca19b;
+  padding-left: 52px;
+  margin: 5px 0 13px;
+}
+.typing-status span {
+  display: inline-block;
+  animation: typing-pulse 1s infinite;
+}
+.emoji-picker[data-slot] {
+  width: 244px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 10px;
+  gap: 7px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 32px #0002;
+  z-index: 150;
+}
+.emoji-picker button {
+  font-size: 22px;
+  background: none;
+  border: 0;
+  padding: 4px;
+  border-radius: 3px;
+}
+.emoji-picker button:hover {
+  background: #eee;
+}
+@keyframes typing-pulse {
+  50% {
+    opacity: 0.25;
+  }
+}
+.moments-shell {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  background: #fff;
+  grid-column: 2;
+}
+.moments-top {
+  height: 57px;
+  min-height: 57px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  background: #f7f7f7;
+}
+.moments-top > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.moments-top h2 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #222;
+  margin: 0;
+}
+.moments-top button {
+  background: none;
+  border: 0;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+  color: #545454;
+}
+.moments-scroll {
+  min-height: 0;
+  overflow-y: auto;
+  background: #fff;
+  scrollbar-width: thin;
+}
+.moments-cover {
+  height: 210px;
+  position: relative;
+  max-width: 690px;
+  margin: 0 auto;
+  background: #a3a69b;
+  overflow: visible;
+}
+.life-photo {
+  display: block;
+  aspect-ratio: 1;
+  width: 100%;
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  background-color: #dbd6cb;
+}
+.moments-cover > .life-photo {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  aspect-ratio: auto;
+  background-size: 200% auto;
+  background-position: 100% 15% !important;
+}
+.moments-cover-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 40%, #0004);
+}
+.moments-home-cover {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: url('/rural-home.png') center 48%/cover no-repeat;
+}
+.cover-profile {
+  position: absolute;
+  right: 27px;
+  bottom: -24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 1;
+}
+.cover-profile strong {
+  font-size: 17px;
+  color: white;
+  text-shadow: 0 1px 3px #0008;
+  margin-top: -12px;
+}
+.cover-profile .avatar {
+  height: 72px;
+  width: 72px;
+  border: 3px solid white;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px #0002;
+}
+.moments-signature {
+  text-align: right;
+  max-width: 690px;
+  padding: 0 111px 0 25px;
+  margin: 18px auto 17px;
+  color: #8f8f8f;
+  font-size: 11px;
+  min-height: 18px;
+}
+.moments-search {
+  max-width: 626px;
+  margin: 28px auto 7px;
+  display: flex;
+  align-items: center;
+  padding: 0 0 9px;
+  border-bottom: 1px solid #eee;
+  gap: 8px;
+}
+.moments-search input {
+  width: 100%;
+  border: 0;
+  background: none;
+  outline: 0;
+  color: #777;
+  font-size: 12px;
+  padding: 7px 1px;
+}
+.moments-search button {
+  border: 0;
+  background: none;
+  color: #999;
+}
+.moments-feed {
+  max-width: 680px;
+  margin: auto;
+  padding: 0 26px;
+}
+.moment {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  border-bottom: 1px solid #eee;
+  padding: 23px 0;
+}
+.moment > .avatar {
+  width: 42px;
+  height: 42px;
+}
+.moment-main {
+  min-width: 0;
+  flex: 1;
+}
+.moment-name {
+  color: #526487;
+  font-size: 14px;
+  font-weight: 600;
+  background: none;
+  border: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+.moment-text {
+  white-space: pre-wrap;
+  color: #222;
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 7px 0 11px;
+}
+.moment-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 325px;
+  gap: 4px;
+}
+.moment-photos.single {
+  display: block;
+  width: 215px;
+  max-width: 100%;
+}
+.moment-photos > button {
+  border: 0;
+  background: none;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.moment-photos > button:hover {
+  filter: brightness(0.94);
+}
+.moment-location {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  color: #6b7e94;
+  font-size: 11px;
+  margin: 9px 0 5px;
+}
+.moment-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 10px 0 9px;
+  min-height: 23px;
+}
+.moment-meta time {
+  color: #a4a4a4;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.moment-meta > div {
+  display: flex;
+  gap: 8px;
+}
+.moment-meta button {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  background: #f2f2f2;
+  color: #65738d;
+  padding: 4px 7px;
+  border: 0;
+  border-radius: 3px;
+  font-size: 11px;
+}
+.moment-meta button.liked {
+  color: #5e7197;
+}
+.moment-responses {
+  background: #f4f4f4;
+  position: relative;
+  padding: 7px 10px;
+  border-radius: 2px;
+}
+.moment-responses:before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 12px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #f4f4f4;
+}
+.moment-likes {
+  color: #5c6c89;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 2px 0 7px;
+  margin-bottom: 3px;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.moment-comment {
+  display: block;
+  text-align: left;
+  width: 100%;
+  color: #303030;
+  font-size: 12px;
+  line-height: 1.8;
+  border: 0;
+  padding: 2px 0;
+  background: none;
+}
+.moment-comment strong {
+  font-weight: 500;
+  color: #5c6c89;
+}
+.moment-comment:hover {
+  background: #ececec;
+}
+.own-comment {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.own-comment > span {
+  flex: 1;
+}
+.own-comment > button {
+  padding: 1px;
+  border: 0;
+  background: none;
+  color: #a1a1a1;
+}
+.moment-comment-form {
+  display: flex;
+  gap: 7px;
+  margin-top: 8px;
+}
+.moment-comment-form input {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid #b7d1b8;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #222;
+  outline: 0;
+}
+.moment-comment-form .wechat-send {
+  padding: 6px 13px;
+}
+.moments-empty,
+.moments-end {
+  text-align: center;
+  color: #b1b1b1;
+  font-size: 11px;
+  padding: 35px 0 45px;
+}
+.moments-empty {
+  font-size: 14px;
+}
+.profile-dialog[data-slot],
+.chat-details-dialog[data-slot],
+.moment-compose-dialog[data-slot],
+.file-properties[data-slot] {
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+  max-width: 430px;
+  padding: 31px;
+  box-shadow: 0 18px 90px #0003;
+  z-index: 150;
+}
+.profile-top {
+  display: flex;
+  gap: 19px;
+  align-items: center;
+}
+.profile-top > .avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+}
+.profile-top [data-slot='dialog-title'] {
+  font-size: 20px;
+  font-weight: 500;
+  color: #222;
+}
+.profile-top [data-slot='dialog-description'] {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #999;
+}
+.profile-top p {
+  font-size: 12px;
+  color: #999;
+  margin: 7px 0 0;
+}
+.profile-signature {
+  border-top: 1px solid #eee;
+  margin-top: 24px;
+  padding-top: 21px;
+  display: flex;
+  gap: 25px;
+  font-size: 13px;
+  color: #aaa;
+}
+.profile-signature p {
+  color: #444;
+  margin: 0;
+  flex: 1;
+  line-height: 1.8;
+}
+.profile-album {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 23px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  padding: 24px 0;
+  font-size: 13px;
+  color: #999;
+}
+.profile-album > div {
+  display: flex;
+  gap: 5px;
+  flex: 1;
+}
+.profile-album .life-photo {
+  width: 52px;
+  height: 52px;
+}
+.profile-chat {
+  margin: 22px auto 0;
+  display: flex;
+  min-width: 160px;
+}
+.address-book {
+  grid-column: 2;
+  background: white;
+  overflow-y: auto;
+  padding: 0 30px;
+}
+.address-book > header {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.address-book h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.address-book header > span {
+  font-size: 12px;
+  color: #999;
+}
+.address-section {
+  color: #999;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 25px 0 9px;
+}
+.address-book > button {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.address-book > button > span:nth-child(2) {
+  flex: 1;
+}
+.address-book strong {
+  font-size: 15px;
+  font-weight: 500;
+  display: block;
+  color: #333;
+}
+.address-book small {
+  font-size: 12px;
+  color: #999;
+  display: block;
+  margin-top: 8px;
+}
+.address-book > button > svg {
+  color: #bbb;
+}
+.chat-details-dialog label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.chat-details-dialog label > span {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.chat-details-dialog input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: #07c160;
+}
+.chat-detail-person {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  padding: 20px 0;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  background: none;
+  font-size: 14px;
+  color: #555;
+}
+.chat-detail-person > svg {
+  margin-left: auto;
+}
+.detail-action {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 18px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  background: none;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #555;
+}
+.detail-action > svg:last-child {
+  margin-left: auto;
+}
+.moment-compose-dialog textarea {
+  border: 0;
+  resize: vertical;
+  min-height: 115px;
+  max-height: 300px;
+  background: white;
+  color: #222;
+  outline: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  width: 100%;
+  padding: 14px 0;
+}
+.publish-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+.publish-author strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+.moment-photo-picker > span {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 13px;
+}
+.moment-photo-picker > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.moment-photo-picker button {
+  border: 2px solid transparent;
+  padding: 0;
+  background: none;
+  position: relative;
+}
+.moment-photo-picker button.selected {
+  border-color: #07c160;
+}
+.moment-photo-picker button.selected:after {
+  content: '✓';
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  background: #07c160;
+  border-radius: 50%;
+  color: white;
+  width: 19px;
+  height: 19px;
+}
+.moment-compose-dialog footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-top: 17px;
+  border-top: 1px solid #eee;
+}
+.moment-compose-dialog footer > span {
+  font-size: 12px;
+  color: #aaa;
+}
+.life-gallery[data-slot] {
+  padding: 0;
+  background: #202225;
+  border: 1px solid #373b40;
+  max-width: min(790px, 94vw);
+  width: 790px;
+  color: white;
+  z-index: 160;
+  gap: 0;
+}
+.life-gallery > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+.life-gallery [data-slot='dialog-title'] {
+  font-weight: 400;
+  font-size: 14px;
+  color: #ddd;
+}
+.life-gallery button {
+  background: none;
+  color: #ddd;
+  border: 0;
+  padding: 6px;
+  display: grid;
+  place-items: center;
+}
+.gallery-stage {
+  display: grid;
+  grid-template-columns: 43px minmax(0, 1fr) 43px;
+  align-items: center;
+  max-width: 690px;
+  width: 100%;
+  margin: auto;
+}
+.gallery-stage .life-photo {
+  max-height: 65vh;
+  width: auto;
+  height: auto;
+  aspect-ratio: 1;
+}
+.life-gallery [data-slot='dialog-description'] {
+  padding: 15px 35px 5px;
+  color: #ccc;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.life-gallery > footer {
+  text-align: center;
+  padding: 10px 0 18px;
+  color: #8a8a8a;
+  font-size: 11px;
+}
+.photo-mat .life-photo {
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 3px 16px #0003;
+  border: 6px solid white;
+}
+.mail-compose-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #326990;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  width: calc(100% - 28px);
+  margin: 0 14px 19px;
+  padding: 10px;
+  font-size: 13px;
+}
+.mail-new-mobile {
+  display: none;
+}
+.mail-list-item {
+  position: relative;
+}
+.mail-list-item .mail-row {
+  width: 100%;
+  padding-right: 19px;
+}
+.mail-row-star {
+  position: absolute;
+  right: 12px;
+  bottom: 11px;
+  background: none;
+  border: 0;
+  color: #b8c5cf;
+  padding: 2px;
+  display: grid;
+  place-items: center;
+}
+.starred {
+  color: #d7a43e !important;
+}
+.mail-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: -12px 0 22px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #edf0f2;
+}
+.mail-actions > button {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background: #f1f5f8;
+  border: 0;
+  padding: 7px 9px;
+  border-radius: 3px;
+  color: #65829a;
+  font-size: 11px;
+}
+.mail-actions > button:nth-child(3) {
+  margin-left: auto;
+}
+.mail-no-selection {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: #b5c1c9;
+}
+.mail-no-selection p {
+  font-size: 14px;
+}
+.scan-source {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #8b8273;
+  border: 1px solid #e9e4d8;
+  background: #faf8f1;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+}
+.mail-body {
+  white-space: pre-wrap;
+  color: #38434b;
+}
+.mail-sender .avatar {
+  width: 35px;
+  height: 35px;
+}
+.mail-compose-dialog[data-slot] {
+  max-width: 670px;
+  width: calc(100vw - 30px);
+  background: #fff;
+  color: #333;
+  padding: 25px;
+  z-index: 155;
+}
+.mail-compose-dialog > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mail-compose-dialog > header > button {
+  border: 0;
+  background: none;
+  color: #888;
+  padding: 3px;
+}
+.mail-compose-dialog [data-slot='dialog-title'] {
+  font-size: 19px;
+  font-weight: 500;
+}
+.mail-compose-dialog [data-slot='dialog-description'] {
+  font-size: 11px;
+  color: #999;
+}
+.mail-compose-dialog > label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid #e7ebed;
+  padding: 12px 0;
+  font-size: 13px;
+}
+.mail-compose-dialog > label > span {
+  width: 52px;
+  color: #909aa1;
+}
+.mail-compose-dialog input {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: 0;
+  outline: 0;
+  color: #333;
+}
+.mail-compose-dialog textarea {
+  min-height: 220px;
+  max-height: 45vh;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.8;
+  resize: vertical;
+  border: 0;
+  outline: 0;
+  padding: 14px 0;
+  background: white;
+  color: #333;
+}
+.mail-compose-dialog footer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.mail-compose-dialog .discard-mail {
+  background: none;
+  border: 0;
+  color: #999;
+  font-size: 12px;
+  margin-left: auto;
+}
+.mail-compose-dialog .system-button {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+.mail-compose-dialog .form-error {
+  margin: 0;
+  min-height: 8px;
+}
+.browser-tab-strip {
+  height: 32px;
+  background: #e9eef3;
+  padding: 4px 12px 0;
+  display: flex;
+  align-items: center;
+  color: #648096;
+  font-size: 11px;
+}
+.browser-tab-strip > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #f8fafc;
+  border-radius: 7px 7px 0 0;
+  height: 29px;
+  width: 220px;
+  padding: 0 12px;
+}
+.browser-tab-strip > span > svg:last-child {
+  margin-left: auto;
+}
+.browser-chrome .browser-icon.starred {
+  color: #cba04b;
+}
+.browser-menu[data-slot] {
+  width: 290px;
+  max-height: 380px;
+  overflow-y: auto;
+  background: white;
+  color: #506575;
+  padding: 15px;
+  border: 1px solid #dde3e9;
+  z-index: 150;
+}
+.browser-menu h3 {
+  margin: 0 0 12px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.browser-menu > button {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  background: none;
+  color: #526775;
+  text-align: left;
+  width: 100%;
+  font-size: 12px;
+  padding: 10px 5px;
+  border: 0;
+  border-bottom: 1px solid #edf0f3;
+  line-height: 1.65;
+}
+.browser-menu > button:hover {
+  background: #f3f6f8;
+}
+.browser-menu > button > svg {
+  flex-shrink: 0;
+}
+.browser-menu > p {
+  font-size: 12px;
+  color: #a0acb4;
+}
+.browser-menu small {
+  color: #adb7bc;
+}
+.bookmark-bar > span {
+  margin-left: auto;
+}
+.bookmark-bar .bookmark-custom {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.file-controls {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 10px;
+  border-bottom: 1px solid #e9eef1;
+  min-height: 43px;
+}
+.file-controls > button {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border: 0;
+  background: none;
+  padding: 5px;
+  color: #688093;
+  font-size: 12px;
+}
+.file-controls > button:disabled {
+  color: #bdc5ca;
+  cursor: default;
+}
+.file-controls > button:last-child {
+  margin-left: auto;
+}
+.file-table-head > button {
+  font-size: 11px;
+  background: none;
+  border: 0;
+  text-align: left;
+  color: #8c9da8;
+  padding: 0;
+}
+.file-row.selected {
+  background: #e4f0f9;
+  outline: 1px solid #bddeef;
+  outline-offset: -1px;
+}
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  padding: 18px 5px;
+}
+.file-grid .file-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 130px;
+  border: 0;
+  padding: 10px;
+  max-width: 180px;
+  text-align: center;
+}
+.file-grid .file-row > span:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+}
+.file-grid .file-row strong {
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  font-weight: 400;
+}
+.file-grid .file-glyph {
+  width: 50px;
+  height: 50px;
+}
+.file-grid .file-row > span:not(:first-child) {
+  display: none;
+}
+.file-grid .life-photo {
+  width: 80px;
+  height: 80px;
+}
+.file-properties h2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.file-property-row {
+  display: flex;
+  gap: 20px;
+  padding: 11px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  line-height: 1.6;
+}
+.file-property-row > span:first-child {
+  color: #999;
+  width: 68px;
+  flex-shrink: 0;
+}
+.file-property-row > span:last-child {
+  overflow-wrap: anywhere;
+  color: #444;
+}
+.file-properties [data-slot='dialog-description'] {
+  font-size: 12px;
+}
+.reader-tools {
+  display: flex;
+  gap: 7px;
+  margin-left: auto;
+}
+.reader-tools > button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: 0;
+  font-size: 11px;
+  color: #79909f;
+  padding: 3px;
+}
+.window-chat .window-titlebar {
+  background: #f5f5f5;
+  color: #737373;
+}
+.window-chat .window-titlebar .app-glyph > svg {
+  color: #747d79;
+}
+@media (max-width: 760px) {
+  .wechat-layout {
+    grid-template-columns: 43px minmax(0, 1fr);
+    grid-template-rows: 81px minmax(0, 1fr);
+  }
+  .wechat-layout.social-mode {
+    grid-template-columns: 43px minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
+  .wechat-rail {
+    gap: 23px;
+    padding: 15px 4px;
+    grid-row: 1/-1;
+  }
+  .wechat-rail > .avatar.portrait {
+    width: 30px;
+    height: 30px;
+  }
+  .wechat-rail > button > svg {
+    width: 21px;
+  }
+  .wechat-rail .moments-symbol {
+    width: 21px;
+    height: 21px;
+  }
+  .wechat-rail .moments-symbol:after {
+    left: 6px;
+    top: 6px;
+  }
+  .contact-list {
+    min-height: 81px;
+  }
+  .contact {
+    min-height: 81px;
+    flex-basis: 100px;
+    padding: 8px 5px;
+    gap: 5px;
+  }
+  .contact > .avatar {
+    width: 34px;
+    height: 34px;
+  }
+  .contact strong {
+    font-size: 10px;
+    padding: 0;
+  }
+  .contact-time,
+  .contact-muted {
+    display: none;
+  }
+  .contact-column {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .conversation {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .conversation-head {
+    height: 51px;
+    padding: 0 14px;
+  }
+  .conversation-head strong {
+    font-size: 15px;
+  }
+  .conversation-scroll {
+    padding: 15px 12px;
+  }
+  .message {
+    gap: 8px;
+    margin-bottom: 17px;
+  }
+  .message .avatar.portrait {
+    width: 29px;
+    height: 29px;
+  }
+  .message .bubble {
+    font-size: 14px;
+    padding: 8px 10px;
+    line-height: 1.7;
+    max-width: calc(100% - 38px);
+  }
+  .chat-compose {
+    padding: 9px 12px 10px;
+    min-height: 158px;
+    max-height: 47%;
+    overflow-y: auto;
+  }
+  .compose-tools {
+    margin-bottom: 7px;
+    height: 20px;
+    gap: 14px;
+  }
+  .reply-chip {
+    font-size: 11px;
+    padding: 5px 7px;
+  }
+  .reply-chip > svg {
+    display: none;
+  }
+  .chat-input {
+    min-height: 38px;
+    height: 42px;
+    font-size: 14px;
+    resize: none;
+  }
+  .chat-send-row small {
+    font-size: 8px;
+  }
+  .chat-send-row .wechat-send {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+  .compose-placeholder {
+    font-size: 10px;
+  }
+  .moments-shell {
+    grid-column: 2;
+    grid-row: 1;
+    height: 100%;
+  }
+  .moments-top {
+    height: 49px;
+    min-height: 49px;
+    padding: 0 15px;
+  }
+  .moments-top h2 {
+    font-size: 15px;
+  }
+  .moments-top .moments-symbol {
+    display: none;
+  }
+  .moments-cover {
+    height: 168px;
+  }
+  .cover-profile {
+    right: 15px;
+    bottom: -18px;
+    gap: 11px;
+  }
+  .cover-profile > .avatar {
+    width: 57px;
+    height: 57px;
+    border-width: 2px;
+  }
+  .cover-profile strong {
+    font-size: 15px;
+  }
+  .moments-signature {
+    font-size: 10px;
+    padding: 0 82px 0 12px;
+    margin-top: 13px;
+  }
+  .moments-search {
+    margin: 23px 15px 0;
+  }
+  .moments-feed {
+    padding: 0 14px;
+  }
+  .moment {
+    padding: 18px 0;
+    gap: 10px;
+  }
+  .moment > .avatar {
+    width: 33px;
+    height: 33px;
+  }
+  .moment-name {
+    font-size: 13px;
+  }
+  .moment-text {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 5px 0 10px;
+  }
+  .moment-photos.single {
+    width: 180px;
+  }
+  .moment-location {
+    font-size: 9px;
+  }
+  .moment-meta {
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: space-between;
+  }
+  .moment-meta time {
+    font-size: 9px;
+  }
+  .moment-meta > div {
+    gap: 4px;
+  }
+  .moment-meta button {
+    font-size: 9px;
+    padding: 3px 5px;
+    gap: 3px;
+  }
+  .moment-meta button > svg {
+    width: 13px;
+  }
+  .moment-meta button > span {
+    display: none;
+  }
+  .moment-responses {
+    padding: 6px 8px;
+  }
+  .moment-comment {
+    font-size: 11px;
+    line-height: 1.85;
+  }
+  .moment-likes {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+  .moment-comment-form input {
+    font-size: 12px;
+    padding: 7px;
+    min-width: 0;
+  }
+  .moment-comment-form .wechat-send {
+    font-size: 11px;
+    padding: 6px 9px;
+  }
+  .moments-end {
+    font-size: 9px;
+    line-height: 1.8;
+  }
+  .address-book {
+    padding: 0 18px;
+    grid-row: 1;
+  }
+  .address-book > header {
+    height: 66px;
+  }
+  .address-book h2 {
+    font-size: 17px;
+  }
+  .address-book header > span {
+    font-size: 10px;
+  }
+  .address-book > button {
+    gap: 12px;
+  }
+  .address-book strong {
+    font-size: 14px;
+  }
+  .address-book small {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+  .profile-dialog[data-slot],
+  .chat-details-dialog[data-slot],
+  .moment-compose-dialog[data-slot],
+  .file-properties[data-slot] {
+    width: calc(100vw - 30px);
+    padding: 24px;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  .profile-top {
+    gap: 13px;
+  }
+  .profile-top > .avatar {
+    width: 57px;
+    height: 57px;
+  }
+  .profile-top [data-slot='dialog-title'] {
+    font-size: 19px;
+  }
+  .profile-top [data-slot='dialog-description'] {
+    font-size: 11px;
+  }
+  .profile-album {
+    gap: 16px;
+  }
+  .profile-album .life-photo {
+    width: 43px;
+    height: 43px;
+  }
+  .profile-signature {
+    gap: 15px;
+    font-size: 12px;
+  }
+  .gallery-stage {
+    grid-template-columns: 26px minmax(0, 1fr) 26px;
+  }
+  .life-gallery [data-slot='dialog-description'] {
+    padding: 13px 22px 0;
+    font-size: 12px;
+  }
+  .life-gallery > header {
+    padding: 15px;
+  }
+  .mail-folders {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .mail-folders .mail-account,
+  .mail-folders .mail-compose-button {
+    display: none;
+  }
+  .mail-folder-list[data-slot] {
+    width: max-content !important;
+    min-width: 100%;
+  }
+  .mail-folder-list [data-slot='tabs-trigger'] {
+    min-width: 92px !important;
+    flex: 0 0 auto !important;
+    padding: 0 12px !important;
+    gap: 5px;
+  }
+  .mail-folder-list [data-slot='tabs-trigger'] > span {
+    display: none;
+  }
+  .mail-new-mobile {
+    display: grid;
+    place-items: center;
+    background: none;
+    border: 0;
+    color: white;
+    padding: 5px;
+    margin-left: 4px;
+  }
+  .mail-brand {
+    gap: 7px;
+  }
+  .mail-brand label {
+    margin-left: auto;
+    width: 53%;
+  }
+  .mail-brand > strong {
+    font-size: 18px;
+  }
+  .mail-list-item {
+    flex: 0 0 190px;
+    width: 190px;
+    height: 100%;
+  }
+  .mail-list-item .mail-row {
+    height: 100%;
+    width: 100%;
+  }
+  .mail-row-star {
+    bottom: 8px;
+    right: 9px;
+  }
+  .mail-actions {
+    gap: 7px;
+    margin: -7px 0 18px;
+    padding-bottom: 13px;
+  }
+  .mail-actions > button {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+  .mail-reading {
+    padding: 23px 20px;
+  }
+  .mail-reading h2 {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 9px;
+  }
+  .mail-body {
+    font-size: 17px;
+    line-height: 2;
+  }
+  .mail-sender .avatar {
+    width: 31px;
+    height: 31px;
+  }
+  .mail-sender strong {
+    font-size: 11px;
+  }
+  .mail-sender strong > span {
+    display: none;
+  }
+  .scan-source {
+    font-size: 10px;
+    padding: 10px;
+    align-items: flex-start;
+    line-height: 1.8;
+  }
+  .scan-source svg {
+    flex-shrink: 0;
+  }
+  .mail-compose-dialog[data-slot] {
+    padding: 22px;
+    max-height: 88vh;
+    overflow: auto;
+  }
+  .mail-compose-dialog textarea {
+    min-height: 180px;
+  }
+  .mail-compose-dialog [data-slot='dialog-description'] {
+    font-size: 10px;
+  }
+  .mail-compose-dialog footer {
+    gap: 8px;
+  }
+  .mail-compose-dialog .system-button {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+  .browser-tab-strip {
+    height: 28px;
+    padding-top: 3px;
+    font-size: 10px;
+  }
+  .browser-tab-strip > span {
+    height: 25px;
+    width: 190px;
+  }
+  .browser-chrome > button:nth-child(2) {
+    display: grid;
+  }
+  .browser-chrome {
+    gap: 0;
+    padding: 5px;
+  }
+  .browser-chrome > button,
+  .browser-chrome > button.browser-icon {
+    padding: 4px;
+  }
+  .browser-chrome .browser-icon > svg {
+    width: 15px;
+  }
+  .browser-chrome form {
+    padding: 6px 7px;
+    min-width: 0;
+  }
+  .browser-chrome input {
+    font-size: 10px !important;
+  }
+  .browser-chrome > button[aria-label='浏览器首页'] {
+    display: none;
+  }
+  .bookmark-bar {
+    gap: 14px;
+  }
+  .bookmark-bar .bookmark-custom {
+    max-width: 90px;
+  }
+  .file-controls {
+    gap: 4px;
+    padding: 7px 4px;
+    min-height: 38px;
+  }
+  .file-controls > button {
+    font-size: 10px;
+    padding: 5px;
+    gap: 3px;
+  }
+  .file-table-head > button {
+    font-size: 10px;
+  }
+  .file-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 14px 0;
+  }
+  .file-grid .file-row {
+    min-height: 126px;
+  }
+  .file-grid .life-photo {
+    width: 70px;
+    height: 70px;
+  }
+  .reader-info small {
+    margin-left: 0;
+  }
+  .reader-tools {
+    margin-left: auto;
+  }
+  .reader-tools > button {
+    font-size: 10px;
+  }
+  .reader-tools > button > svg {
+    width: 13px;
+  }
+  .photo-mat .life-photo {
+    border-width: 4px;
+  }
+  .file-property-row {
+    font-size: 12px;
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .typing-status span {
+    animation: none;
+  }
+}

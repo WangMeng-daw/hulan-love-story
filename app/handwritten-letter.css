@@ -1,0 +1,116 @@
+.handwritten-attachment {
+  margin: 26px 0 0;
+  max-width: 880px;
+}
+.handwritten-attachment figcaption {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #727778;
+  font-size: 12px;
+  padding: 12px 14px;
+  background: #f4f5f5;
+  border: 1px solid #e1e4e4;
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+}
+.handwritten-attachment figcaption > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.handwritten-attachment figcaption > a {
+  margin-left: auto;
+  color: #75858a;
+  padding: 4px;
+}
+.letter-scan-preview {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #d7d2c7;
+  background: #e6dfcc;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+.handwritten-scan {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: #605b50;
+}
+.letter-scan-preview:focus-visible {
+  outline: 3px solid #698f9b;
+  outline-offset: 3px;
+}
+.letter-image-dialog {
+  width: min(980px, 96vw) !important;
+  max-width: 980px !important;
+  height: 94dvh;
+  max-height: 94dvh;
+  padding: 18px !important;
+  display: flex !important;
+  flex-direction: column;
+  gap: 12px !important;
+  background: #f3f3f2 !important;
+  overflow: hidden;
+}
+.letter-image-dialog h2 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 30px;
+}
+.letter-zoom-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: #626b6c;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.letter-zoom-toolbar button,
+.letter-zoom-toolbar a {
+  display: grid;
+  place-items: center;
+  padding: 7px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: inherit;
+}
+.letter-zoom-toolbar button:disabled {
+  opacity: 0.35;
+}
+.letter-zoom-toolbar button:not(:disabled):hover,
+.letter-zoom-toolbar a:hover {
+  background: #e7eae9;
+}
+.letter-original-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  background: #ccc9c0;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+@media (max-width: 760px) {
+  .handwritten-attachment {
+    margin-top: 18px;
+  }
+  .handwritten-attachment figcaption {
+    font-size: 11px;
+    padding: 10px 8px;
+  }
+  .letter-image-dialog {
+    padding: 12px !important;
+    gap: 10px !important;
+    height: 94dvh;
+  }
+  .letter-image-dialog h2 {
+    font-size: 13px;
+  }
+  .letter-zoom-toolbar {
+    gap: 15px;
+  }
+}

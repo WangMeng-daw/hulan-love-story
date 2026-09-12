@@ -1,0 +1,261 @@
+.wechat-favorites {
+  grid-column: 2/-1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+  color: #222;
+}
+.wechat-favorites > header {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 24px 32px;
+  border-bottom: 1px solid #ddd;
+  background: #fafafa;
+}
+.wechat-favorites h2 {
+  font-size: 21px;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+}
+.wechat-favorites header label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #e9e9e9;
+  border-radius: 4px;
+  padding: 7px 10px;
+  max-width: 300px;
+  flex: 1;
+  color: #888;
+}
+.wechat-favorites input {
+  border: 0;
+  background: transparent;
+  outline: none;
+  min-width: 0;
+  width: 100%;
+  font-size: 14px;
+}
+.wechat-favorites nav {
+  padding: 14px 32px;
+  display: flex;
+  gap: 22px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.wechat-favorites nav button {
+  font-size: 13px;
+  color: #777;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+.wechat-favorites nav button.active {
+  color: #07a157;
+  border-bottom-color: #07a157;
+}
+.favorite-scroll {
+  overflow: auto;
+  padding: 22px 32px;
+  min-height: 0;
+}
+.favorite-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 14px;
+  padding: 20px;
+  text-align: left;
+  background: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
+.favorite-card:hover {
+  border-color: #c7c7c7;
+  background: #fdfdfd;
+}
+.favorite-card > .life-photo,
+.favorite-icon {
+  width: 76px;
+  height: 76px;
+  flex: 0 0 76px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #edf0ed;
+}
+.favorite-icon {
+  display: grid;
+  place-items: center;
+  color: #85958c;
+}
+.favorite-icon svg {
+  width: 30px;
+  height: 30px;
+}
+.favorite-copy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.favorite-copy > strong {
+  font-size: 16px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.favorite-copy > small {
+  font-size: 12px;
+  color: #999;
+}
+.favorite-source {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #999;
+  font-size: 11px;
+  margin-top: 12px;
+}
+.favorite-source .avatar {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 2px;
+}
+.favorite-source time {
+  margin-left: auto;
+}
+.favorites-empty {
+  padding: 80px 0;
+  text-align: center;
+  color: #aaa;
+}
+.favorites-empty svg {
+  margin: auto;
+}
+.favorites-empty p {
+  margin-top: 16px;
+  font-size: 14px;
+}
+.wechat-account-dialog {
+  max-width: 380px !important;
+  background: #f8f8f8 !important;
+}
+.account-current {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px 0;
+}
+.account-current > .avatar,
+.wechat-account-dialog form > .avatar {
+  width: 68px;
+  height: 68px;
+}
+.account-current strong {
+  font-size: 20px;
+  font-weight: 500;
+}
+.account-current > span {
+  font-size: 13px;
+  color: #888;
+}
+.account-switch-button,
+.account-login-button {
+  display: block;
+  background: #07a157;
+  color: white;
+  border-radius: 4px;
+  padding: 11px 20px;
+  width: 100%;
+  margin: 10px 0;
+}
+.wechat-account-dialog form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding-top: 14px;
+}
+.wechat-account-dialog form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+  font-size: 13px;
+  color: #666;
+}
+.wechat-account-dialog input {
+  padding: 10px 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #222;
+  min-width: 0;
+}
+.wechat-account-dialog form > button:last-child {
+  font-size: 13px;
+  color: #888;
+  padding: 5px;
+}
+.login-error {
+  font-size: 12px;
+  color: #c94141;
+}
+.remembered-account {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.remembered-account .avatar {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+}
+.remembered-account svg {
+  margin-left: auto;
+}
+@media (max-width: 760px) {
+  .wechat-favorites > header {
+    padding: 20px 16px;
+    gap: 20px;
+  }
+  .wechat-favorites nav {
+    padding: 12px 16px;
+    gap: 18px;
+  }
+  .favorite-scroll {
+    padding: 16px 12px;
+  }
+  .favorite-card {
+    padding: 12px;
+    gap: 12px;
+  }
+  .favorite-card > .life-photo,
+  .favorite-icon {
+    width: 54px;
+    height: 54px;
+    flex-basis: 54px;
+  }
+  .favorite-copy > strong {
+    font-size: 14px;
+  }
+  .favorite-source {
+    flex-wrap: wrap;
+  }
+  .favorite-source time {
+    margin-left: 0;
+  }
+  .wechat-rail {
+    overflow-y: auto;
+  }
+}
