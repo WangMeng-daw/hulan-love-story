@@ -2,6 +2,7 @@ import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { writeResourceManifest } from './scripts/resource-manifest.mjs';
 import tailwindcss from '@tailwindcss/postcss';
 
 const project = fileURLToPath(new URL('.', import.meta.url));
@@ -11,7 +12,22 @@ export default defineConfig({
   root: resolve(project, 'github-pages'),
   publicDir: resolve(project, 'public'),
   base,
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'hulan-resources',
+      apply: 'build',
+      async buildStart() {
+        await writeResourceManifest(resolve(project, 'public'));
+      },
+      async closeBundle() {
+        await writeResourceManifest(
+          resolve(project, 'dist/github-pages'),
+          true,
+        );
+      },
+    },
+  ],
   css: { postcss: { plugins: [tailwindcss()] } },
   resolve: {
     alias: {

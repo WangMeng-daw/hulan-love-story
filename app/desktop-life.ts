@@ -55,7 +55,14 @@ export const people: Record<
     image: '/everyday-avatars.png',
   },
 };
-export const lifePhotos = [
+export const lifePhotos: {
+  id: string;
+  title: string;
+  position: string;
+  date: string;
+  caption: string;
+  image?: string;
+}[] = [
   {
     id: 'noodles',
     title: '爷爷包的饺子',
@@ -85,6 +92,70 @@ export const lifePhotos = [
     date: '1985 年 4 月 6 日',
     caption: '那孩子一直攥着他的手。他说，不松也行，咱就这么回家。',
   },
+  {
+    id: 'dumpling-bags',
+    title: '装给孩子们的饺子',
+    position: '0% 0%',
+    date: '2025 年 11 月 15 日',
+    caption: '冰柜边的几袋饺子，各有各的馅。临走时他又往袋子里添了一把。',
+    image: '/moments/everyday-01.png',
+  },
+  {
+    id: 'dumpling-board',
+    title: '再多包一点',
+    position: '100% 0%',
+    date: '2025 年 11 月 16 日',
+    caption: '案板上落着一层面粉，擀面杖还没收。',
+    image: '/moments/everyday-01.png',
+  },
+  {
+    id: 'home-gate',
+    title: '回家时的院门',
+    position: '0% 100%',
+    date: '2024 年 2 月 9 日',
+    caption: '院门虚掩着。老屋的灯，从下午就亮了。',
+    image: '/moments/everyday-01.png',
+  },
+  {
+    id: 'river-thaw',
+    title: '四月的河',
+    position: '100% 100%',
+    date: '2019 年 4 月 6 日',
+    caption: '冰从河心慢慢散开，岸边的柳树还没有发芽。',
+    image: '/moments/everyday-01.png',
+  },
+  {
+    id: 'scarf-stitch',
+    title: '歪着的那一针',
+    position: '0% 0%',
+    date: '2016 年 12 月 9 日',
+    caption: '旧毛线磨起了绒，针脚留着当年的样子。',
+    image: '/moments/everyday-02.png',
+  },
+  {
+    id: 'scarf-chair',
+    title: '雪天椅背上的围巾',
+    position: '100% 0%',
+    date: '2020 年 11 月 24 日',
+    caption: '从道口回来，把围巾搭在椅背上。窗外又下起了雪。',
+    image: '/moments/everyday-02.png',
+  },
+  {
+    id: 'first-computer',
+    title: '刚装好的电脑',
+    position: '0% 100%',
+    date: '2013 年 11 月 24 日',
+    caption: '建军替父亲接好键盘和鼠标。小桌上，从此多了一台电脑。',
+    image: '/moments/everyday-02.png',
+  },
+  {
+    id: 'washed-bowls',
+    title: '除夕洗好的碗',
+    position: '100% 100%',
+    date: '2024 年 2 月 9 日',
+    caption: '散席以后，两只红花碗洗净，并排晾在窗下。',
+    image: '/moments/everyday-02.png',
+  },
 ];
 export type Moment = {
   id: string;
@@ -106,7 +177,7 @@ export const moments: Moment[] = [
     person: 'lu',
     date: '2016/12/09 20:17',
     visibility: 'private',
-    photos: ['flowers'],
+    photos: ['scarf-stitch'],
     likes: [],
     comments: [],
     text: '围巾又拿出来了，摸了摸针脚。第三行，第十七针，还是歪的。\n你当时说，等回来再给我拆。我说不着急。\n这一句不着急，竟然说到了今天。',
@@ -146,7 +217,7 @@ export const moments: Moment[] = [
     person: 'lu',
     date: '2025/10/08 21:43',
     visibility: 'private',
-    photos: ['coast'],
+    photos: [],
     likes: [],
     comments: [],
     text: '知遥，今天有个老学生来看我，说还记得你上课的声音。\n我想让他学一句，又没好意思。\n你的信我能背下来。可你叫我名字，末尾那个字是轻一点，还是重一点，我想了半宿。\n我不是不想你。我天天都想。怎么还是记不清了。',
@@ -196,7 +267,7 @@ export const moments: Moment[] = [
     person: 'lu',
     date: '2024/02/09 23:18',
     visibility: 'private',
-    photos: ['noodles'],
+    photos: ['washed-bowls'],
     likes: [],
     comments: [],
     text: '淑琴把你那只碗摆好了。没有人问为什么。\n阿禾说饺子肚最好吃，跟建军小时候一样。\n知遥，今天家里吵得很。你要在，准舍不得睡。',
@@ -206,7 +277,7 @@ export const moments: Moment[] = [
     person: 'lu',
     date: '2020/11/24 16:32',
     visibility: 'private',
-    photos: ['flowers'],
+    photos: ['scarf-chair'],
     likes: [],
     comments: [],
     text: '又到这一天了。\n围巾洗得薄了，织错的那一针还在。\n你在信里说，下回让我先走。那会儿我不肯，非等车看不见了才回。\n现在我早就肯了。\n今天去道口，回来晚了，炉子灭了。自己重新生上了。',
@@ -258,7 +329,7 @@ export const moments: Moment[] = [
     person: 'mom',
     date: '2025/11/15 17:20',
     text: '爸又给我们装了一袋饺子。\n嘴上说冰柜放不下，袋子上写着：建军这袋没葱，阿禾那袋多放肉。',
-    photos: ['noodles'],
+    photos: ['dumpling-bags'],
     location: '柳河屯',
     likes: ['aunt', 'me', 'lu'],
     comments: [
@@ -271,7 +342,7 @@ export const moments: Moment[] = [
     person: 'lu',
     date: '2025/11/16 15:42',
     text: '建军说，下周末带阿禾回来。\n白菜剁好了。再多包一点。',
-    photos: ['noodles'],
+    photos: ['dumpling-board'],
     location: '柳河屯 · 家',
     likes: ['aunt', 'mom', 'zhou'],
     comments: [
@@ -285,7 +356,7 @@ export const moments: Moment[] = [
     person: 'aunt',
     date: '2024/02/09 18:36',
     text: '回家了。\n这个门，从我进家那天起，就没用过钥匙。',
-    photos: ['noodles'],
+    photos: ['home-gate'],
     location: '呼兰 · 柳河屯',
     likes: ['lu', 'zhou', 'me'],
     comments: [
@@ -311,7 +382,7 @@ export const moments: Moment[] = [
     person: 'lu',
     date: '2019/04/06 11:24',
     text: '今天河开了。\n给建军包顿饺子。',
-    photos: ['piano'],
+    photos: ['river-thaw'],
     location: '柳河屯',
     likes: ['aunt', 'zhou'],
     comments: [
@@ -336,7 +407,7 @@ export const moments: Moment[] = [
     person: 'aunt',
     date: '2013/11/24 19:22',
     text: '给爸买的电脑装好了。\n他第一件事，是让我把炕柜上的旧照片放大。',
-    photos: ['coast'],
+    photos: ['first-computer'],
     location: '柳河屯',
     likes: ['zhou', 'lu'],
     comments: [

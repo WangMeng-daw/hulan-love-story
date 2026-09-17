@@ -114,7 +114,7 @@ export function PhotoTile({
   const p = lifePhotos.find((p) => p.id === id) || lifePhotos[0];
   return (
     <span role="img" aria-label={p.title} className={'life-photo ' + className}>
-      <AtlasImage src="/life-atlas.png" position={p.position} />
+      <AtlasImage src={p.image || '/life-atlas.png'} position={p.position} />
     </span>
   );
 }

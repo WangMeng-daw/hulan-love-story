@@ -6,6 +6,7 @@ import './wechat-archive.css';
 import './handwritten-letter.css';
 import './paper-scans.css';
 import './memory-film.css';
+import './story-book.css';
 export const metadata: Metadata = {
   title: '呼兰爱情故事 · 爷爷的旧电脑',
   description:

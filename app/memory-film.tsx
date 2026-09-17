@@ -2,14 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { publicAsset } from '../lib/public-asset';
-import {
-  ChevronLeft,
-  ChevronRight,
-  Pause,
-  Play,
-  X,
-  RotateCcw,
-} from 'lucide-react';
+import { ChevronLeft, ChevronRight, Pause, Play, X } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -17,6 +10,7 @@ import {
   DialogDescription,
 } from '@/components/ui/dialog';
 import { memoryScenes } from './memory-story';
+import { StoryBookEnd } from './story-book';
 
 /* eslint-disable jsx-a11y/prefer-tag-over-role -- The container names a single cropped still; the full atlas is decorative. */
 export function MemoryStill({
@@ -122,33 +116,14 @@ export function MemoryFilm({ onClose }: { onClose: () => void }) {
           data-playing={playing && !analysis && !credits}
         >
           {credits ? (
-            <section className="memory-credits">
-              <span>呼 兰 爱 情 故 事</span>
-              <h2>等春天来</h2>
-              <p>陆守义 · 许知遥</p>
-              <p>陆建军 · 陈淑琴 · 陆禾</p>
-              <p>还有记得他们的桂兰，和柳河屯的旧人。</p>
-              <div className="credits-last">
-                <p>来年河开的时候，咱们就办喜事吧。</p>
-                <p>
-                  河开了很多次。
-                  <br />
-                  他只答应过这一次。
-                </p>
-              </div>
-              <p className="memory-caption">
-                画面根据故事重现。献给那些被好好爱过，却来不及道别的人。
-              </p>
-              <button
-                onClick={() => {
-                  setIndex(0);
-                  setPlaying(true);
-                  setAnalysis(false);
-                }}
-              >
-                <RotateCcw size={16} /> 再看一遍
-              </button>
-            </section>
+            <StoryBookEnd
+              onReturn={onClose}
+              onReplay={() => {
+                setIndex(0);
+                setPlaying(true);
+                setAnalysis(false);
+              }}
+            />
           ) : (
             <>
               <div

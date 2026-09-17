@@ -1,0 +1,65 @@
+{
+  "tool": "Built-in image_gen",
+  "letters": [
+    {
+      "id": "winter",
+      "date": "一九八四年十一月三日",
+      "text": [
+        "来年河开的时候，咱们就办喜事吧。",
+        "不要收音机，也不要新柜子。买两只碗就行，咱慢慢过。",
+        "建军的棉袄我补好了。他问补完了是不是就得走，我听着难受。",
+        "陆守义，咱成家以后，把他接来吧。炕上多铺一床褥子就够了。",
+        "这几年四封信的开头，我藏了一句话。你按春夏秋冬念念看。"
+      ],
+      "prompt": "Use case: historical-scene. Create a highly photorealistic flatbed scan of ONE actual handwritten Chinese love letter, a game asset, portrait 3:4 high resolution at least 1536x2048. This is an ordinary 1980s northeast rural Chinese schoolteacher woman's private letter, carefully kept folded in a cabinet for forty years and scanned later. Full rectangular letter sheet fills almost all the frame; show whole page and all margins. Matte naturally yellowed warm ivory cheap writing paper, visible fine paper fibers, restrained pale age freckles mainly at margins, subtle horizontal and vertical folding creases, lightly worn corners. Soft flat scanner light, realistic delicate creases and faded ink; not dramatic brown parchment, no burnt edges, no staged props, no desk, no flowers, no stamps, no envelopes, no printed titles, no computer UI. Extremely authentic personal everyday handwriting in blue-black fountain pen ink, legible Chinese semi-running handwritten script (日常钢笔行楷), modest irregular character sizes, variable pen pressure, human spacing/baselines and natural joins. Absolutely not a typeset font, not printed Songti, not formal calligraphy art. Same educated young woman's handwriting across these letters. The entire exact Chinese body below must appear legibly, faithfully and without changes. Maintain its paragraph order. CRITICAL: first written character on the page is '来', do not add salutation or title before it because this is a puzzle clue. Body starts near top with generous normal paper margins, wrap organically across handwritten lines. After the body, leave blank breathing room. Put handwritten signature '知遥' and date '一九八四年十一月三日' in the BOTTOM RIGHT of the sheet, date on line below signature, both below all other text and near bottom margin. Do NOT put date/name above the letter. No other text, no watermark. Exact body:\n来年河开的时候，咱们就办喜事吧。\n\n不要收音机，也不要新柜子。买两只碗就行，咱慢慢过。\n\n建军的棉袄我补好了。他问补完了是不是就得走，我听着难受。\n\n陆守义，咱成家以后，把他接来吧。炕上多铺一床褥子就够了。\n\n这几年四封信的开头，我藏了一句话。你按春夏秋冬念念看。\n\nBottom-right signature:\n知遥\n一九八四年十一月三日"
+    },
+    {
+      "id": "autumn",
+      "date": "一九八三年九月十七日",
+      "text": [
+        "天凉了，你别还穿那件薄褂子。",
+        "我给你织的围巾有一针织错了，拆了两回，最后还是错着。你凑合戴，暖和就行。",
+        "屯里人说你不爱说话，可我知道，你啥都记得。",
+        "我说想吃冻梨，第二天窗台上就摆了两个。",
+        "等我回去，给你补那件棉袄。"
+      ],
+      "prompt": "Use case: historical-scene. Create a highly photorealistic flatbed scan of ONE actual handwritten Chinese love letter, a game asset, portrait 3:4 high resolution at least 1536x2048. This is an ordinary 1980s northeast rural Chinese schoolteacher woman's private letter, carefully kept folded in a cabinet for forty years and scanned later. Full rectangular letter sheet fills almost all the frame; show whole page and all margins. Matte naturally yellowed warm ivory cheap writing paper, visible fine paper fibers, restrained pale age freckles mainly at margins, subtle horizontal and vertical folding creases, lightly worn corners. Soft flat scanner light, realistic delicate creases and faded ink; not dramatic brown parchment, no burnt edges, no staged props, no desk, no flowers, no stamps, no envelopes, no printed titles, no computer UI. Extremely authentic personal everyday handwriting in blue-black fountain pen ink, legible Chinese semi-running handwritten script (日常钢笔行楷), modest irregular character sizes, variable pen pressure, human spacing/baselines and natural joins. Absolutely not a typeset font, not printed Songti, not formal calligraphy art. Same educated young woman's handwriting across these letters. The entire exact Chinese body below must appear legibly, faithfully and without changes. Maintain its paragraph order. CRITICAL: first written character on the page is '天', do not add salutation or title before it because this is a puzzle clue. Body starts near top with generous normal paper margins, wrap organically across handwritten lines. After the body, leave blank breathing room. Put handwritten signature '知遥' and date '一九八三年九月十七日' in the BOTTOM RIGHT of the sheet, date on line below signature, both below all other text and near bottom margin. Do NOT put date/name above the letter. No other text, no watermark. Exact body:\n天凉了，你别还穿那件薄褂子。\n\n我给你织的围巾有一针织错了，拆了两回，最后还是错着。你凑合戴，暖和就行。\n\n屯里人说你不爱说话，可我知道，你啥都记得。\n\n我说想吃冻梨，第二天窗台上就摆了两个。\n\n等我回去，给你补那件棉袄。\n\nBottom-right signature:\n知遥\n一九八三年九月十七日"
+    },
+    {
+      "id": "summer",
+      "date": "一九八二年七月九日",
+      "text": [
+        "春天你栽的那棵小杨树，长高了吗？",
+        "培训班后头有一排大杨树，风一吹，我就想起屯子。",
+        "他们问我毕业后去哪里，我说回柳河屯。",
+        "问为什么，我没好意思说。",
+        "其实你知道。"
+      ],
+      "prompt": "Use case: historical-scene. Create a highly photorealistic flatbed scan of ONE actual handwritten Chinese love letter, a game asset, portrait 3:4 high resolution at least 1536x2048. This is an ordinary 1980s northeast rural Chinese schoolteacher woman's private letter, carefully kept folded in a cabinet for forty years and scanned later. Full rectangular letter sheet fills almost all the frame; show whole page and all margins. Matte naturally yellowed warm ivory cheap writing paper, visible fine paper fibers, restrained pale age freckles mainly at margins, subtle horizontal and vertical folding creases, lightly worn corners. Soft flat scanner light, realistic delicate creases and faded ink; not dramatic brown parchment, no burnt edges, no staged props, no desk, no flowers, no stamps, no envelopes, no printed titles, no computer UI. Extremely authentic personal everyday handwriting in blue-black fountain pen ink, legible Chinese semi-running handwritten script (日常钢笔行楷), modest irregular character sizes, variable pen pressure, human spacing/baselines and natural joins. Absolutely not a typeset font, not printed Songti, not formal calligraphy art. Same educated young woman's handwriting across these letters. The entire exact Chinese body below must appear legibly, faithfully and without changes. Maintain its paragraph order. CRITICAL: first written character on the page is '春', do not add salutation or title before it because this is a puzzle clue. Body starts near top with generous normal paper margins, wrap organically across handwritten lines. After the body, leave blank breathing room. Put handwritten signature '知遥' and date '一九八二年七月九日' in the BOTTOM RIGHT of the sheet, date on line below signature, both below all other text and near bottom margin. Do NOT put date/name above the letter. No other text, no watermark. Exact body:\n春天你栽的那棵小杨树，长高了吗？\n\n培训班后头有一排大杨树，风一吹，我就想起屯子。\n\n他们问我毕业后去哪里，我说回柳河屯。\n\n问为什么，我没好意思说。\n\n其实你知道。\n\nBottom-right signature:\n知遥\n一九八二年七月九日"
+    },
+    {
+      "id": "spring",
+      "date": "一九八二年四月六日",
+      "text": [
+        "等雪化了，我就回屯子。",
+        "你送我到道口，一直站着。我回了三次头，你都还在。",
+        "陆守义，下回你先走。我看见你站那儿，就不想上车。",
+        "学校的炉子记得添柴，孩子们的手都皴了。",
+        "还有你，也记得吃饭。"
+      ],
+      "prompt": "Use case: historical-scene. Create a highly photorealistic flatbed scan of ONE actual handwritten Chinese love letter, a game asset, portrait 3:4 high resolution at least 1536x2048. This is an ordinary 1980s northeast rural Chinese schoolteacher woman's private letter, carefully kept folded in a cabinet for forty years and scanned later. Full rectangular letter sheet fills almost all the frame; show whole page and all margins. Matte naturally yellowed warm ivory cheap writing paper, visible fine paper fibers, restrained pale age freckles mainly at margins, subtle horizontal and vertical folding creases, lightly worn corners. Soft flat scanner light, realistic delicate creases and faded ink; not dramatic brown parchment, no burnt edges, no staged props, no desk, no flowers, no stamps, no envelopes, no printed titles, no computer UI. Extremely authentic personal everyday handwriting in blue-black fountain pen ink, legible Chinese semi-running handwritten script (日常钢笔行楷), modest irregular character sizes, variable pen pressure, human spacing/baselines and natural joins. Absolutely not a typeset font, not printed Songti, not formal calligraphy art. Same educated young woman's handwriting across these letters. The entire exact Chinese body below must appear legibly, faithfully and without changes. Maintain its paragraph order. CRITICAL: first written character on the page is '等', do not add salutation or title before it because this is a puzzle clue. Body starts near top with generous normal paper margins, wrap organically across handwritten lines. After the body, leave blank breathing room. Put handwritten signature '知遥' and date '一九八二年四月六日' in the BOTTOM RIGHT of the sheet, date on line below signature, both below all other text and near bottom margin. Do NOT put date/name above the letter. No other text, no watermark. Exact body:\n等雪化了，我就回屯子。\n\n你送我到道口，一直站着。我回了三次头，你都还在。\n\n陆守义，下回你先走。我看见你站那儿，就不想上车。\n\n学校的炉子记得添柴，孩子们的手都皴了。\n\n还有你，也记得吃饭。\n\nBottom-right signature:\n知遥\n一九八二年四月六日"
+    }
+  ],
+  "summerDateEdits": [
+    {
+      "prompt": "Edit this image with one extremely precise correction only: the handwritten date at the bottom currently reads 一九八三年七月九日. It MUST read 一九八二年七月九日 (July 9, 1982). Replace only the 三 character in that date with 二, matching the same blue-black fountain pen handwriting. Preserve all other Chinese body text exactly, preserve the 知遥 signature, the handwriting, all paper texture, aging, folds, framing, dimensions and layout. Do not add any text.",
+      "accepted": false,
+      "reason": "The generated date still showed 1983."
+    },
+    {
+      "prompt": "Precise localized text replacement. The bottom-right handwritten date is incorrect. Completely replace that ONE date line with these EXACT characters and numerals: 1982年7月9日 . Use Arabic digits 1982, 7, 9, NOT Chinese numerals, to make the year unequivocal. Match the existing dark blue handwritten fountain-pen style. Keep the signature 知遥 directly above the date. Preserve ALL other Chinese body text, layout, paper color, folds, aging, and full-page framing completely unchanged. The visible date MUST say 1982年7月9日. Only replace the bottom date line.",
+      "accepted": true,
+      "visibleDate": "1982年7月9日"
+    }
+  ]
+}

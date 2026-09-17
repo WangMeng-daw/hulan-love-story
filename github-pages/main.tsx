@@ -7,6 +7,7 @@ import '../app/wechat-archive.css';
 import '../app/handwritten-letter.css';
 import '../app/paper-scans.css';
 import '../app/memory-film.css';
+import '../app/story-book.css';
 
 declare const __HULAN_PUBLIC_BASE__: string;
 (window as Window & { __HULAN_PUBLIC_BASE__?: string }).__HULAN_PUBLIC_BASE__ =

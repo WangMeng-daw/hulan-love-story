@@ -1,0 +1,18 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-09-17",
+  "assets": [
+    {
+      "file": "public/moments/everyday-01.png",
+      "prompt": "Use case photorealistic-natural. Create one square 2x2 PHOTO ATLAS, four equally sized square photographs touching exactly at center, absolutely no borders, margins, labels or overlaid text. These will be cropped as four separate ordinary Chinese rural family WeChat snapshots, NOT a designed collage. Each photograph has its own environment and viewpoint. Natural slightly imperfect phone photography in rural Heilongjiang, 2010s to 2025, real affordable household materials, no cinematic grading, no people/faces. TOP LEFT: clear plastic bags of frozen uncooked handmade dumplings stacked on an old kitchen counter beside a small white chest freezer, gray winter window light, overhead oblique shot. TOP RIGHT: close shot of a flour-dusted wooden board covered in freshly pinched raw dumplings, rolling pin and a bowl of chopped cabbage filling at edge, dim warm kitchen, no bags. BOTTOM LEFT: outdoors at dusk in winter, a modest rural red brick house courtyard entrance and old wooden gate left ajar, light snow, small red spring couplets on door too distant to read, intimate homecoming snapshot, NO food. BOTTOM RIGHT: rural Heilongjiang river thawing in early April, broken thin ice on gray blue water, brown reeds and muddy bank, bare willow branches, overcast daylight, NO house, food or people. Authentic casual photos, coherent subdued colors but four unmistakably distinct compositions. Output 2048x2048 or highest available square resolution."
+    },
+    {
+      "file": "public/moments/everyday-02.png",
+      "prompt": "Use case photorealistic-natural. Create ONE square 2x2 photo atlas, four equally sized square photos edge-to-edge, boundaries exactly 50%, no margins, labels, frames, collage decoration or added words. Four ordinary imperfect phone snapshots in a modest Northeast China rural home 2013-2024, intimate unstyled memory details, natural everyday light, no faces or human figures. TOP LEFT: very close macro of old slightly faded crimson hand-knitted wool scarf lying on a dark wooden table, visible uneven stitch in otherwise regular knitting, shallow side daylight, single fabric fills image. TOP RIGHT: a long red wool scarf draped over the back of a worn wooden chair beside a frosted window on a snowy afternoon, whole chair and snowy outdoor window visible, room subdued blue daylight; different viewpoint and scale from top left. BOTTOM LEFT: a 2013 desktop computer with chunky flat LCD monitor on a small scratched pine desk inside old rural room, compact keyboard and wired mouse, monitor displaying generic blue desktop only without readable writing or people, cheap curtain and radiator, unpolished casual wide shot. BOTTOM RIGHT: after supper, two old white enamel bowls with faded red floral decorations, one slightly chipped, standing washed and empty beside a drying cloth on old kitchen windowsill, nighttime outside and warm yellow household bulb inside, sink edge barely visible, no food, no people. Four different photographic compositions, no repeated photos, documentary domestic realism, avoid polished studio or cinematic warm grading. Highest available square resolution."
+    }
+  ],
+  "support": {
+    "file": "public/support/wechat-pay.png",
+    "source": "User-provided image, copied byte-for-byte; not generated or retouched."
+  }
+}

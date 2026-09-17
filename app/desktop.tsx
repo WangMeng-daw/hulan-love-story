@@ -2,6 +2,7 @@
 import { proseParagraphClass } from './prose-paragraph';
 import { memoryLocks, type MemoryLock } from './memory-story';
 import { MemoryFilm } from './memory-film';
+import { StoryBookStart } from './story-book';
 import {
   Fragment,
   useEffect,
@@ -561,7 +562,25 @@ export default function Desktop() {
         canContinue: s.save.started,
         player: '陆禾',
         setting: '2025 年冬，呼兰柳河屯',
-        controls: ['打开旧电脑'],
+        controls: ['翻开这本书', '一键下载全部资源', '支持作者'],
+        book: document
+          .querySelector('[data-book-state]')
+          ?.getAttribute('data-book-state'),
+        resources: {
+          status: document
+            .querySelector('.resource-preload')
+            ?.getAttribute('data-status'),
+          completed: Number(
+            document
+              .querySelector('.resource-preload')
+              ?.getAttribute('data-completed') || 0,
+          ),
+          total: Number(
+            document
+              .querySelector('.resource-preload')
+              ?.getAttribute('data-total') || 0,
+          ),
+        },
       };
     const front = s.wins.filter((w) => !w.min).at(-1)?.id;
     let visible: unknown = null;
@@ -3165,58 +3184,11 @@ export default function Desktop() {
   }
   if (!entered)
     return (
-      <main className="story-cover">
-        <Image
-          className="cover-landscape"
-          src="/rural-home.png"
-          width={1672}
-          height={941}
-          unoptimized
-          alt="呼兰冬日，老屋亮着一扇窗"
-          priority
-        />
-        <div className="cover-shade" />
-        <section className="cover-content">
-          <p className="cover-place">黑龙江 · 呼兰　 /　 2025 年冬</p>
-          <h1>
-            呼兰<span>爱情故事</span>
-          </h1>
-          <p className="cover-line">
-            雪又落了一院子。
-            <br />
-            这一次，没人出来接你。
-          </p>
-          <div className="cover-intro">
-            <p>
-              你叫陆禾，今年二十二岁。爷爷陆守义走了一周，你回到柳河屯，替家里整理他留下的旧电脑。
-            </p>
-            <p>
-              爸爸陆建军和妈妈陈淑琴还在回村的路上。你登录自己的微信，家庭群里的最后几条消息，停在爷爷说“回来就行”的那天。
-            </p>
-            <p>
-              电脑里有旧照片、扫描的信，还有一些舍不得删的东西。你以为自己只是回来收拾一间屋子。
-            </p>
-          </div>
-          <button
-            id="enter-desktop"
-            className="cover-enter"
-            disabled={!ready}
-            onClick={enterDesktop}
-          >
-            {ready
-              ? save.started
-                ? '继续整理旧电脑'
-                : '打开旧电脑'
-              : '正在读取存档'}
-            <ArrowRight size={20} />
-          </button>
-          <p className="cover-guide">自由翻看 · 自动保存 · 建议戴上耳机</p>
-        </section>
-        <footer className="cover-footer">
-          <span>一段藏在日常里的往事</span>
-          <span>原创虚构 · 网页叙事解谜</span>
-        </footer>
-      </main>
+      <StoryBookStart
+        ready={ready}
+        started={save.started}
+        onEnter={enterDesktop}
+      />
     );
   return (
     <main className="computer-desktop">
